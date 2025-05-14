@@ -2,73 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Portable Isolated Environment</title>
-    <meta content="New Secure Environment for Academic Assessments" name="description">
-    <meta content="SEB, PIE, Banana" name="keywords">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portable Isolated Environment</title>
+  <meta content="New Secure Environment for Academic Assessments" name="description">
+  <meta content="SEB, PIE, Banana" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <!--<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <!--<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: MyResume
-    * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-    * Updated: Jun 29 2024 with Bootstrap v5.3.3
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
+  <script>
+    function togglePresentationIcons() {
+      const wrapper = document.getElementById("presentation-icons-wrapper");
+      if (wrapper.style.maxHeight && wrapper.style.maxHeight !== "0px") {
+        wrapper.style.maxHeight = "0";
+        document.getElementById("presentations-icon").classList.remove("bi-folder2-open");
+        document.getElementById("presentations-icon").classList.add("bi-folder2");
+      } else {
+        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+        document.getElementById("presentations-icon").classList.remove("bi-folder2");
+        document.getElementById("presentations-icon").classList.add("bi-folder2-open");
+      }
+    }
+  </script>
 </head>
 
 <body class="index-page">
 
-<header id="header" class="header d-flex flex-column justify-content-center">
+  <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <nav id="navmenu" class="navmenu">
-        <ul>
-            <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-            <li><a href="#context"><i class="bi bi-file-earmark-text navicon"></i><span>Context</span></a></li>
-            <li><a href="#goals"><i class="bi bi-bullseye navicon"></i><span>Goals</span></a></li>
-            <li><a href="#architecture"><i class="bi bi-diagram-3 navicon"></i><span>Architecture</span></a></li>
-            <li><a href="#team"><i class="bi bi-people navicon"></i><span>Team & Supervisors</span></a></li>
-        </ul>
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#context"><i class="bi bi-info-circle navicon"></i><span>Context</span></a></li>
+        <li><a href="#goals"><i class="bi bi-bullseye navicon"></i><span>Goals</span></a></li>
+        <li><a href="#architecture"><i class="bi bi-diagram-3 navicon"></i><span>Architecture</span></a></li>
+        <li><a href="#demo"><i class="bi bi-play navicon"></i><span>Demo</span></a></li>
+        <li><a href="#documents"><i class="bi bi-file-earmark-text navicon"></i><span>Documents</span></a></li>
+        <li><a href="#team"><i class="bi bi-people navicon"></i><span>Team & Supervisors</span></a></li>
+      </ul>
     </nav>
 
-</header>
+  </header>
 
-<main class="main">
+  <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-        <img src="assets/img/background.jpg">
+      <img src="assets/img/background.jpg">
 
-        <div class="container" data-aos="zoom-out">
-            <div class="row justify-content-center" id="title">
-                <div class="col-lg-9">
-                    <h2>Portable Isolated Environment</h2>
-                    <p>New <span class="typed" data-typed-items="Secure, Reliable, Private, Efficient, Fine-tuned">Secure</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span> Environment for Academic Assessments</p>
-                    <!--
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center" id="title">
+          <div class="col-lg-9">
+            <h2>Portable Isolated Environment</h2>
+            <p>New <span class="typed"
+                data-typed-items="Secure, Reliable, Private, Efficient, Fine-tuned">Secure</span><span
+                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span> Environment for Academic Assessments
+            </p>
+            <!--
                     <div class="social-links">
                       <a href="#"><i class="bi bi-browser-chrome"></i></a>
                       <a href="#"><i class="bi bi-facebook"></i></a>
@@ -76,217 +89,306 @@
                       <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                     -->
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
 
     </section><!-- /Hero Section -->
 
     <!-- Context Section -->
     <section id="context" class="resume section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Context</h2>
-            <p>The Safe Exam Browser (SEB) is widely used for securing online exams by locking down a student's device, but it continues to face several recurring issues and limitations despite regular updates. One of the main problems with SEB is related to compatibility and stability across different systems. For instance, many users experience issues with the browser freezing during exams, which can lead to students being locked out of their sessions. In recent years, the use of SEB has become disused by some teachers, as it is a software that currently has many vulnerabilities already discovered by students, which means that it is no longer effective in preventing the appearance of fraud during tests.</p>
-            <p>Having said that, we note that there is a need to create something that is faster to use, that is more intuitive for any teacher to apply in their assessments and that allows students to carry out their tests with greater comfort on their personal computers.</p>
-            <p>At the end of our project we hope to have created a marketable product that will provide its buyer with a completely customized system in which the teaching team will be able to insert or create their various tests and assessments.</p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Context</h2>
+        <p>The Safe Exam Browser (SEB) is widely used for securing online exams by locking down a student's device, but
+          it continues to face several recurring issues and limitations despite regular updates. One of the main
+          problems with SEB is related to compatibility and stability across different systems. For instance, many users
+          experience issues with the browser freezing during exams, which can lead to students being locked out of their
+          sessions. In recent years, the use of SEB has become disused by some teachers, as it is a software that
+          currently has many vulnerabilities already discovered by students, which means that it is no longer effective
+          in preventing the appearance of fraud during tests.</p>
+        <p>Having said that, we note that there is a need to create something that is faster to use, that is more
+          intuitive for any teacher to apply in their assessments and that allows students to carry out their tests with
+          greater comfort on their personal computers.</p>
+        <p>At the end of our project we hope to have created a marketable product that will provide its buyer with a
+          completely customized system in which the teaching team will be able to insert or create their various tests
+          and assessments.</p>
+      </div><!-- End Section Title -->
 
     </section><!-- /Resume Section -->
 
     <!-- Goals Section -->
     <section id="goals" class="services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Goals</h2>
-            <p>Our goals are to create an alternative to SEB that meets the following basic requirements:</p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Goals</h2>
+        <p>Our goals are to create an alternative to SEB that meets the following basic requirements:</p>
+      </div><!-- End Section Title -->
 
-        <div class="container">
+      <div class="container">
 
-            <div class="row gy-4">
+        <div class="row gy-4">
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-item item-orange position-relative">
-                        <div class="icon">
-                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                      d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-                            </svg>
-                            <i class="bi bi-broadcast"></i>
-                        </div>
-                        <h3>Extra Goal</h3>
-                        <p>Create a system to enable better control over the examinees through a server managed by the examiners.</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-item item-cyan position-relative">
-                        <div class="icon">
-                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                      d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                            </svg>
-                            <i class="bi bi-usb-drive"></i>
-                        </div>
-                        <h3>Main Goal</h3>
-                        <p>Create a Plug and Play alternative to SEB, making it available on all PC devices without the need to install any extra software.</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-teal position-relative">
-                        <div class="icon">
-                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                                      d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                            </svg>
-                            <i class="bi bi-currency-dollar"></i>
-                        </div>
-                        <h3>Extra Goal</h3>
-                        <p>Replicate and ship the final product to the rest of the university for general usage.</p>
-                    </div>
-                </div><!-- End Service Item -->
-
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                  </path>
+                </svg>
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h3>Extra Goal</h3>
+              <p>Create a system to enable better control over the examinees through a server managed by the examiners.
+              </p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                <i class="bi bi-usb-drive"></i>
+              </div>
+              <h3>Main Goal</h3>
+              <p>Create a Plug and Play alternative to SEB, making it available on all PC devices without the need to
+                install any extra software.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
+                  </path>
+                </svg>
+                <i class="bi bi-currency-dollar"></i>
+              </div>
+              <h3>Extra Goal</h3>
+              <p>Replicate and ship the final product to the rest of the university for general usage.</p>
+            </div>
+          </div><!-- End Service Item -->
 
         </div>
+
+      </div>
 
     </section><!-- /Services Section -->
 
     <!-- Architecture Section -->
     <section id="architecture" class="services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Architecture</h2>
-            <p>The following image illustrates the architecture of the system.</p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Architecture</h2>
+        <p>The following image illustrates the architecture of the system.</p>
+      </div><!-- End Section Title -->
 
-        <div class="container d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/diagrams/architecture.png" alt="Architecture Diagram" class="img-fluid" style="width: 70%; height:auto">
-        </div>
+      <div class="container d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/diagrams/architecture.png" alt="Architecture Diagram" class="img-fluid"
+          style="width: 70%; height:auto">
+      </div>
 
     </section><!-- /Services Section -->
+
+    <!-- Demo Section -->
+    <section id="demo" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Demo</h2>
+        <p>The following YouTube video shows the main features and the overall flow of the application and how it works:</p>
+      </div><!-- End Section Title -->
+
+      <!-- YouTube Video -->
+      <div class="container d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <iframe width="840" height="472.5" src="" title="YouTube video player"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section><!-- /Demo Section -->
+
+    <!-- Documents Section -->
+    <section id="documents" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Documents</h2>
+      </div>
+
+      <div class="container d-flex justify-content-center gap-5 mt-4" data-aos="fade-up" data-aos-delay="100" style="font-size: 20px;">
+        <div class="text-center" style="width: 200px;">
+          <a href="documents/report.pdf" target="_blank" class="text-decoration-none text-dark">
+            <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+            <p><strong>Report</strong></p>
+          </a>
+        </div>
+        <div class="text-center" style="width: 200px;">
+          <button id="toggle-presentations" class="btn btn-link text-decoration-none text-dark" onclick="togglePresentationIcons()" style="font-size: 20px;">
+            <i id="presentations-icon" class="bi bi-folder2" style="font-size: 55.8px; color: #0d6efd;"></i>
+            <p><strong>Presentations</strong></p>
+          </button>
+        </div>
+        <div class="text-center" style="width: 200px;">
+          <a href="documents/poster.pdf" target="_blank" class="text-decoration-none text-dark">
+            <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+            <p><strong>Poster</strong></p>
+          </a>
+        </div>
+      </div>
+
+      <div id="presentation-icons-wrapper" style="overflow: hidden; transition: max-height 0.5s ease; max-height: 0;">
+        <div id="presentation-icons" class="container d-flex justify-content-center gap-5 mt-4" style="font-size: 20px;">
+          <div class="text-center" style="width: 200px;">
+            <a href="documents/milestone1.pdf" target="_blank" class="text-decoration-none text-dark">
+              <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+              <p><strong>Milestone 1</strong></p>
+            </a>
+          </div>
+          <div class="text-center" style="width: 200px;">
+            <a href="documents/milestone2.pdf" target="_blank" class="text-decoration-none text-dark">
+              <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+              <p><strong>Milestone 2</strong></p>
+            </a>
+          </div>
+          <div class="text-center" style="width: 200px;">
+            <a href="documents/milestone3.pdf" target="_blank" class="text-decoration-none text-dark">
+              <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+              <p><strong>Milestone 3</strong></p>
+            </a>
+          </div>
+          <div class="text-center" style="width: 200px;">
+            <a href="documents/milestone4.pdf" target="_blank" class="text-decoration-none text-dark">
+              <i class="bi bi-filetype-pdf" style="font-size: 60px; color: #0d6efd;"></i>
+              <p><strong>Milestone 4</strong></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Documents Section -->
 
     <!-- Team Section -->
     <section id="team" class="services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Team</h2>
-            <p></p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Team</h2>
+        <p></p>
+      </div><!-- End Section Title -->
 
-        <div class="container">
+      <div class="container">
 
-            <div class="row gy-4">
+        <div class="row gy-4">
 
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/reis.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Miguel Reis</h3>
-                        <p>108545</p>
-                        <p>mreis@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/duarte.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Duarte Santos</h3>
-                        <p>113304</p>
-                        <p>duartesantos@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/garcia.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Tiago Garcia</h3>
-                        <p>114184</p>
-                        <p>tiago.rgarcia@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/janicas.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Gabriel Janicas</h3>
-                        <p>108689</p>
-                        <p>gabrieljanicas@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/zeca.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Diogo Silva</h3>
-                        <p>108212</p>
-                        <p>dsgps@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/moco.png" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>Rodrigo Moço</h3>
-                        <p>108939</p>
-                        <p>rodrigo.miguel@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/reis.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Miguel Reis</h3>
+              <p>108545</p>
+              <p>mreis@ua.pt</p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/duarte.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Duarte Santos</h3>
+              <p>113304</p>
+              <p>duartesantos@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/garcia.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Tiago Garcia</h3>
+              <p>114184</p>
+              <p>tiago.rgarcia@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/janicas.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Gabriel Janicas</h3>
+              <p>108689</p>
+              <p>gabrieljanicas@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/zeca.jpg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Diogo Silva</h3>
+              <p>108212</p>
+              <p>dsgps@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/moco.png" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>Rodrigo Moço</h3>
+              <p>108939</p>
+              <p>rodrigo.miguel@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
 
         </div>
+
+      </div>
 
     </section><!-- /Services Section -->
 
     <!-- Supervisors Section -->
     <section id="" class="services section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Supervisors</h2>
-            <p></p>
-        </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Supervisors</h2>
+        <p></p>
+      </div><!-- End Section Title -->
 
-        <div class="container">
+      <div class="container">
 
-            <div class="row gy-4">
+        <div class="row gy-4">
 
-                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/joaoalmeida.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>João Almeida</h3>
-                        <p>joao.rafael.almeida@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
-                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-orange position-relative team-card">
-                        <img src="assets/img/team/barraca.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
-                        <h3>João Barraca</h3>
-                        <p>jpbarraca@ua.pt</p>
-                    </div>
-                </div><!-- End Service Item -->
-
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/joaoalmeida.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>João Almeida</h3>
+              <p>joao.rafael.almeida@ua.pt</p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-orange position-relative team-card">
+              <img src="assets/img/team/barraca.jpeg" style="border-radius: 10%; height: 250px; width: 250px" />
+              <h3>João Barraca</h3>
+              <p>jpbarraca@ua.pt</p>
+            </div>
+          </div><!-- End Service Item -->
 
         </div>
 
+      </div>
+
     </section><!-- /Services Section -->
 
-</main>
+  </main>
 
-<footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background">
     <div class="container">
-        <h3 class="sitename">Portable Isolated Environment</h3>
-        <p class="easteregg-normal">Project created with 💛 and ☕ by 🐧</p>
-        <p class="easteregg-hidden">Project created with 💛 and 🍻 by 🐧</p>
-        <!--
+      <h3 class="sitename">Portable Isolated Environment</h3>
+      <p class="easteregg-normal">Project created with 💛 and ☕ by 🐧</p>
+      <p class="easteregg-hidden">Project created with 💛 and 🍻 by 🐧</p>
+      <!--
         <div class="social-links d-flex justify-content-center">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -295,42 +397,43 @@
             <a href=""><i class="bi bi-linkedin"></i></a>
         </div>
         -->
-        <div class="container">
-            <div class="copyright">
-                <span>Copyright</span> &#169; <strong class="px-1 sitename">Portable Isolated Environment</strong>
-                <span>All Rights Reserved</span>
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
-            </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> &#169; <strong class="px-1 sitename">Portable Isolated Environment</strong>
+          <span>All Rights Reserved</span>
         </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-<!-- Preloader -->
-<div id="preloader"></div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
