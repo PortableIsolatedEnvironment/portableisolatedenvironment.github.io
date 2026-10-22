@@ -19,3 +19,69 @@ footer:hover .easteregg-normal {
 footer:hover .easteregg-hidden {
     display: block;
 }
+
+.memoriam {
+    position: relative;
+    display: inline-block;
+}
+
+.memoriam img {
+    filter: grayscale(100%);
+}
+
+.memoriam-dove {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 2;
+    font-size: 2.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.memoriam-note {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    width: 90%;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.memoriam:hover .memoriam-note {
+    opacity: 1;
+}
+
+.memoriam-note strong,
+.memoriam-note em {
+    display: block;
+}
+
+.memoriam-note em {
+    margin-top: 4px;
+    font-size: 0.75rem;
+}
+
+.memoriam-hint {
+    display: none;
+    margin-top: 4px;
+    font-size: 0.75rem;
+}
+
+.memoriam.audio-blocked {
+    cursor: pointer;
+}
+
+.memoriam.audio-blocked .memoriam-hint {
+    display: block;
+}

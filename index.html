@@ -29,21 +29,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
-
-  <script>
-    function togglePresentationIcons() {
-      const wrapper = document.getElementById("presentation-icons-wrapper");
-      if (wrapper.style.maxHeight && wrapper.style.maxHeight !== "0px") {
-        wrapper.style.maxHeight = "0";
-        document.getElementById("presentations-icon").classList.remove("bi-folder2-open");
-        document.getElementById("presentations-icon").classList.add("bi-folder2");
-      } else {
-        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
-        document.getElementById("presentations-icon").classList.remove("bi-folder2");
-        document.getElementById("presentations-icon").classList.add("bi-folder2-open");
-      }
-    }
-  </script>
 </head>
 
 <body class="index-page">
@@ -337,7 +322,15 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item item-orange position-relative team-card">
-              <img src="assets/img/team/moco.png" style="border-radius: 10%; height: 250px; width: 250px" />
+              <div class="memoriam" data-audio="assets/audio/memoriam.mp3">
+                <span class="memoriam-dove" aria-hidden="true">🕊️</span>
+                <span class="memoriam-note">
+                  <strong>08/03/2003 - 08/07/2025 †</strong>
+                  <em>Taken from us in a BMW crash, Coldplay still playing, shortly after failing PECI.</em>
+                  <span class="memoriam-hint">🔊 click to listen</span>
+                </span>
+                <img src="assets/img/team/moco.png" style="border-radius: 10%; height: 250px; width: 250px" />
+              </div>
               <h3>Rodrigo Moço</h3>
               <p>108939</p>
               <p>rodrigo.miguel@ua.pt</p>
@@ -438,6 +431,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
